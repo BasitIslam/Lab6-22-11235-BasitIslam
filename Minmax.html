@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<h1> MINMAX </h1>
+</head>
+
+<body>
+<form id="form">
+        <label>a.</label>
+        <input id="n1" type="number"><br>
+        <label>b.</label>
+        <input id="n2" type="number"><br>
+        <label>c.</label>
+        <input id="n3" type="number"><br>
+        <label>d.</label>
+        <input id="n4" type="number"><br>
+        <label>e.</label>
+    <input id="n5" type="number"><br>
+    </form>
+    <button type="submit" onclick="submit()" id="form2">
+        Submit
+    </button>
+    <br>
+    <h3 id="min" >Min:</h3>
+    <h3 id="max">Max:</h3>
+    <h3 id="rand">Random:</h3>
+
+</body>
+
+<script>
+    function submit() {
+        var a = document.getElementById("n1").value;
+        var b = document.getElementById("n2").value;
+        var c = document.getElementById("n3").value;
+        var d = document.getElementById("n4").value;
+        var e = document.getElementById("n5").value;
+        console.log(e);
+
+        var minE = document.getElementById("min");
+        var maxE = document.getElementById("max");
+        var randomE = document.getElementById("rand")
+        minE.innerHTML = `Min: ${Math.min(a,b,c,d,e)}`
+        maxE.innerHTML= `Max: ${Math.max(a,b,c,d,e)}`
+
+        const list = [a,b,c,d,e];
+        console.log(Math.floor(Math.random()*5));
+        randomE.innerHTML = `Random: ${list[Math.floor(Math.random()*5)]}`
+    }
+</script>
+    </html>
