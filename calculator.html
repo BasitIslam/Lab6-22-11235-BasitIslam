@@ -1,0 +1,65 @@
+<html>
+
+    <head>
+
+        <title>JS Calculator</title>
+
+    </head>
+
+    <body>
+
+        <h1>JavaScript Calculator</h1>
+
+       <b> a. <input type="text" id="a"><br>
+
+        b. <input type="text" id="b"></b><br><br>
+
+        <button onclick="operation()" id="btn">Click Me</button>
+
+        <p id="sum">Sum: </p>
+
+        <p id="prod">Product: </p>
+
+        <p id="div">Division: </p>
+
+        <p id="sub">Subtraction: </p>
+
+        
+
+    </body>
+
+    <script type="text/javascript">
+
+        function operation()
+
+        {
+
+            var first = document.getElementById("a").value;
+
+            var second = document.getElementById("b").value;
+
+            var a = parseInt(first, 10);
+
+            var b = parseInt(second, 10);
+
+            var sum = "Sum: "+(a+b);
+
+            var product = "Product: "+(a*b);
+
+            var division ="Division: "+(a/b);
+
+            var subtraction = "Subtraction: "+(a-b);
+
+            document.getElementById("sum").innerHTML = sum.bold();
+
+            document.getElementById("prod").innerHTML = product.bold();
+
+            document.getElementById("div").innerHTML = division.bold();
+
+            document.getElementById("sub").innerHTML = subtraction.bold();
+
+        }
+
+    </script>
+
+</html>
